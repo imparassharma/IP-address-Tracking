@@ -1,0 +1,193 @@
+:root {
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+    --Gray: hsl(189, 100%, 99%);
+  }
+  body {
+    font-family: "Rubik", sans-serif;
+    /* Weights: 400, 500, 700; */
+    margin: 0;
+    background: url("./images/pattern-bg.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+  }
+
+  .container{
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: url("./images/map.jpg");
+  }
+
+  main {
+    position: relative;
+  }
+
+  .info-content{
+      border: solid 2px black;
+  }
+  .info-content,
+  form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+  }
+  .form-control {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--Gray);
+  }
+  label,
+  input {
+    box-sizing: border-box;
+  }
+  .input-submit {
+    display: flex;
+  }
+  input {
+    width: 90%;
+    padding: 0.7rem;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  button {
+    width: 15%;
+    right: 0;
+    background-color: var(--Very-Dark-Gray);
+    border: none;
+    outline: none;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    cursor: pointer;
+    color: white;
+  }
+
+    button img {
+    max-width: 100%;
+    height: auto;
+    }
+
+.info-content {
+  position: absolute;
+  background-color: var(--Gray);
+  border-radius: 0.7rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+.info {
+  text-align: center;
+}
+.info p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: var(--Dark-Gray);
+  font-weight: 700;
+}
+.info p:last-child {
+  font-weight: 500;
+  margin-top: 0.7rem;
+  color: var(--Very-Dark-Gray);
+}
+.info:last-child p:last-child {
+  margin-bottom: 0;
+}
+.attribution {
+  background: url("./images/pattern-bg.png");
+  font-size: 11px;
+  text-align: center;
+  padding: 0.7rem;
+}
+
+.attribution a {
+  color: var(--Gray);
+}
+dialog {
+  border: none;
+  border-radius: 0.7rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content-dialog p {
+  text-align: center;
+}
+.btn-dialog {
+  display: block;
+  border-radius: 0.7rem;
+  color: var(--Gray);
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#map {
+  z-index: -10;
+  height: calc(100vh - 293px);
+}
+
+.ad-zone {
+  height: 0.1px;
+}
+@media screen and (min-width: 768px) {
+  .info-content,
+  form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  dialog {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    background-size: contain;
+  }
+  form {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+  }
+  .info-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .info {
+    text-align: initial;
+    border-right: 1.5px solid var(--Dark-Gray);
+    margin-left: 1.5rem;
+  }
+  .info:first-child {
+    margin-left: initial;
+  }
+  .info:last-child {
+    border-right: none;
+  }
+  dialog {
+    width: 20%;
+  }
+  #map {
+    height: calc(100vh - 229px);
+  }
+}
